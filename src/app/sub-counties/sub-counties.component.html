@@ -1,0 +1,11 @@
+
+  <app-create-sub-county
+    (create)="addCounty($event)"
+    [s]="name"
+  >
+  </app-create-sub-county>
+  <div class="list-sub-counties">
+    <div class="sub-county" *ngFor="let s of subs">
+      <a>{{s.name}}</a>
+    </div>
+  </div>

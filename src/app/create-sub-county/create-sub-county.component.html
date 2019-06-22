@@ -1,0 +1,12 @@
+<form (ngSubmit)="addCounty(state.value)" #state="ngForm" novalidate>
+  <input
+    type="text"
+    placeholder="name"
+    name="name"
+    ngModel
+  />
+  <input type="submit"/>
+</form>
+<div>
+  {{ s }}
+</div>
