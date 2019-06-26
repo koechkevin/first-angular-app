@@ -1,0 +1,188 @@
+body {
+  font-family: system,-apple-system,system-ui,BlinkMacSystemFont,Helvetica Neue,Helvetica,Lucida Grande,sans-serif;
+}
+.body {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  height: 100vh;
+  .chat-list {
+    min-width: 330px;
+    width: 30vw;
+    background-color: #ffffff;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    .top-list {
+      height: 25vh;
+      position: relative;
+      top: 0;
+      background-color: #eeeeee;
+      .nav-bar {
+        height: 60px;
+        display: inline-flex;
+        place-items: center;
+        .icons {
+          position: absolute;
+          right: 20px;
+          color: #a0a2a3;
+          align-items: center;
+          .message {
+            margin-left: 25px;
+            cursor: pointer;
+          }
+          .more_vert {
+            margin-left: 25px;
+            cursor: pointer;
+          }
+        }
+        .profile-picture {
+          margin-left: 10px;
+
+          img {
+            margin-top: 10px;
+            border-radius: 50%;
+          }
+        }
+      }
+      .notifications {
+        height: 90px;
+        background-color: #9de1fe;
+      }
+      .search {
+        padding: 5px;
+        display: flex;
+        button {
+          height: 30px;
+          border: none;
+          background-color: transparent;
+          outline: none;
+        }
+        input[type="text"] {
+          width: 85%;
+          height: 30px;
+          margin-top: 5px;
+          margin-left: 10px;
+          border-radius: 15px;
+          outline: none;
+          border: none;
+          &::placeholder {
+            color: darkgray;
+            font-size: 14px;
+            font-family: system,-apple-system,system-ui,BlinkMacSystemFont,Helvetica Neue,Helvetica,Lucida Grande,sans-serif;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  .chat-body {
+    min-width: 380px;
+    width: 70vw;
+    background-color: #e2dad2;
+    .nav-bar {
+      height: 60px;
+      width: 100%;
+      background-color: #eeeeee;
+      display: inline-flex;
+      border-left: 1px solid #e0e0e0;
+      .prof-pic {
+        margin-top: 5px;
+        margin-left: 15px;
+        img {
+        border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+      .icons {
+        i {
+          margin-left: 20px;
+          cursor: pointer;
+        }
+        .rotate {
+          transform: rotate(140deg);
+        }
+        position: absolute;
+        right: 20px;
+        margin-top: 15px;
+        color: rgba(0, 0, 0, 0.6);;
+      }
+    }
+  }
+}
+
+.list-chat {
+  height: 75px;
+  display: inline-flex;
+
+  img {
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .b {
+    border-bottom: 1px solid #e0e0e0;
+    font-family: system,-apple-system,system-ui,BlinkMacSystemFont,Helvetica Neue,Helvetica,Lucida Grande,sans-serif;
+    min-width: 250px;
+    width: 23vw;
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    grid-template-columns: repeat(2, max-content);
+    margin-top: 10px;
+    margin-left: 15px;
+    .name {
+      padding-bottom: 10px;
+      font-size: 16px;
+      width: 19vw;
+      min-width: 200px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .text {
+      flex-grow: 1;
+      overflow: hidden;
+      color: #00000099;
+      font-size: 14px;
+      position: relative;
+      min-width: 200px;
+      width: 19vw;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .time {
+      float: right;
+      right: 10px;
+      font-size: 12px;
+      color: #aaaaaa;
+    }
+    .notifier {
+      font-size: 10px;
+      background-color: limegreen;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      color: white;
+      text-align: center;
+    }
+  }
+}
+.list {
+  height: 75vh;
+  overflow-y: scroll;
+}
+.detail {
+  font-family: system,-apple-system,system-ui,BlinkMacSystemFont,Helvetica Neue,Helvetica,Lucida Grande,sans-serif;
+  display: grid;
+  grid-template-rows: repeat(2, max-content);
+  margin-left: 15px;
+  margin-top: 12px;
+  cursor: pointer;
+  .name {
+    padding-bottom: 5px;
+    font-size: 16px;
+  }
+  .last-seen {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
